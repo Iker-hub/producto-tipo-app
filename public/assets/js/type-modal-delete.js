@@ -8,7 +8,7 @@
         let name = element.dataset.name;
         let form = document.getElementById('modalDeleteResourceForm');
         form.action = action;
-        $('#deleteProduct').text(name);
+        $('#deleteType').text(name);
     });
 
 })();

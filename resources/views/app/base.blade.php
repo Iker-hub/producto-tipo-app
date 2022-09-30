@@ -23,10 +23,6 @@
                         <li class="nav-item {{$activeTipo ?? ''}}">
                             <a class="nav-link" href="{{ url('tipo') }}">Type</a>
                         </li>    
-                    @else 
-                        <li class="nav-item">
-                            <a class="nav-link disabled">-</a>
-                        </li>
                     @endif
                 </ul>
             </div>

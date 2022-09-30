@@ -3,13 +3,13 @@
 @section('content')
 <div>
     <div class="row" style="margin-top: 8px;">
-        Product id#: {{ $producto->id }}
+        Type id#: {{ $tipo->id }}
     </div>
     <div class="row" style="margin-top: 8px;">
-        Product name: {{ $producto->nombre}}
+        Type name: {{ $tipo->nombre}}
     </div>
     <div class="row" style="margin-top: 8px;">
-        Product price: {{ $producto->precio }}
+        Type description: {{ $tipo->description }}
     </div>
     <div class="row" style="margin-top: 8px;">
         <a href="{{ url()->previous() }}" class="btn btn-primary">back</a>

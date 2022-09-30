@@ -9,14 +9,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
-        <p>Confirm delete <span id="deleteProduct">XXX</span>?</p>
+        <p>Confirm delete <span id="deleteType">XXX</span>?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <form id="modalDeleteResourceForm" action="" method="post">
             @method('delete')
             @csrf
-            <input type="submit" class="btn btn-primary" value="Delete product"/>
+            <input type="submit" class="btn btn-primary" value="Delete type"/>
         </form>
       </div>
     </div>
@@ -39,8 +39,8 @@
             <thead>
                 <tr>
                     <th scope="col"># id</th>
-                    <th scope="col">name</th>
-                    <th scope="col">price</th>
+                    <th scope="col">type</th>
+                    <th scope="col">description</th>
                     @if(session()->has('user'))
                     <th scope="col">delete</th>
                     <th scope="col">edit</th>
@@ -49,31 +49,31 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($productos as $producto)
+                @foreach ($tipos as $tipo)
                     <tr>
                         <td>
-                            {{ $producto->id }}
+                            {{ $tipo->id }}
                         </td>
                         <td>
-                            {{ $producto->nombre }}
+                            {{ $tipo->nombre }}
                         </td>
                         <td>
-                            {{ $producto->precio }}
+                            {{ $tipo->descipcion }}
                         </td>
                         @if(session()->has('user'))
                             <td>
                                 <a href="javascript: void(0);" 
-                                   data-name="{{ $producto->nombre }}"
-                                   data-url="{{ url('producto/' . $producto->id) }}"
+                                   data-name="{{ $tipo->nombre }}"
+                                   data-url="{{ url('tipo/' . $tipo->id) }}"
                                    data-toggle="modal"
                                    data-target="#modalDelete">delete</a>
                             </td>
                             <td>
-                                <a href="{{ url('producto/' . $producto->id . '/edit') }}">edit</a>
+                                <a href="{{ url('tipo/' . $tipo->id . '/edit') }}">edit</a>
                             </td>
                         @endif
                         <td>
-                            <a href="{{ url('producto/' . $producto->id) }}">show</a>
+                            <a href="{{ url('tipo/' . $tipo->id) }}">show</a>
                         </td>
                     </tr>
                 @endforeach
@@ -82,11 +82,11 @@
     </div>
     @if(session()->has('user'))
     <div class="row">
-        <a href="{{ url('producto/create') }}" class="btn btn-success">add product</a>
+        <a href="{{ url('tipo/create') }}" class="btn btn-success">add type</a>
     </div>
     @endif
 @endsection
 
 @section('scripts')
-<script src="{{ url('assets/js/product-modal-delete.js') }}"></script>
+<script src="{{ url('assets/js/type-modal-delete.js') }}"></script>
 @endsection
