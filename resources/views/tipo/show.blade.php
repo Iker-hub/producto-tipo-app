@@ -6,10 +6,10 @@
         Type id#: {{ $tipo->id }}
     </div>
     <div class="row" style="margin-top: 8px;">
-        Type name: {{ $tipo->nombre}}
+        Type name: {{ $tipo->tipo}}
     </div>
     <div class="row" style="margin-top: 8px;">
-        Type description: {{ $tipo->description }}
+        Type description: {{ $tipo->descripcion }}
     </div>
     <div class="row" style="margin-top: 8px;">
         <a href="{{ url()->previous() }}" class="btn btn-primary">back</a>

@@ -15,7 +15,7 @@
         @method('put')
         <div class="form-group">
             <label for="tipo">Type name</label>
-            <input value="{{ old('tipo', $tipo->nombre) }}" required type="text" minlength="2" maxlength="100" class="form-control" id="tipo" name="tipo" placeholder="Type name">
+            <input value="{{ old('tipo', $tipo->tipo) }}" required type="text" minlength="2" maxlength="100" class="form-control" id="tipo" name="tipo" placeholder="Type name">
             @error('tipo')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -29,7 +29,7 @@
         </div>
         <button type="submit" class="btn btn-primary">edit</button>
         &nbsp;
-        <a href="{{ url('descripcion') }}" class="btn btn-primary">back</a>
+        <a href="{{ url('tipo') }}" class="btn btn-primary">back</a>
     </form>
 </div>
 @endsection

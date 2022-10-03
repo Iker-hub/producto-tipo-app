@@ -55,10 +55,10 @@
                             {{ $tipo->id }}
                         </td>
                         <td>
-                            {{ $tipo->nombre }}
+                            {{ $tipo->tipo }}
                         </td>
                         <td>
-                            {{ $tipo->descipcion }}
+                            {{ $tipo->descripcion }}
                         </td>
                         @if(session()->has('user'))
                             <td>
