@@ -28,7 +28,7 @@
         </div>
         <button type="submit" class="btn btn-primary">add</button>
         &nbsp;
-        <a href="{{ url('descripcion') }}" class="btn btn-primary">back</a>
+        <a href="{{ url('tipo') }}" class="btn btn-primary">back</a>
     </form>
 </div>
 @endsection
